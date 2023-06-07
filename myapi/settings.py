@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY',"django-insecure-xj2aj1cezgikv=48%(r&h!)a&ot&btdizm$f#7=m*3d3!n5vu3")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+# CSRF_TRUSTED_ORIGINS = ['https://green-wind-7466.fly.dev']
 
 # Application definition
 
@@ -70,8 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "myapi.wsgi.application"
-
+WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
